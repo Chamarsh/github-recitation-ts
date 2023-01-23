@@ -1,8 +1,16 @@
 // Endpoint for querying the fibonacci numbers
 
-import fibonacci from 'fib.ts'
+import fibonacci from './fib.ts'
 
-export default (req , res) => {
+interface Req {
+  params: string
+}
+
+interface Res {
+  send: (arg0: string) => void;
+}
+
+export default (req: Req, res: Res) => {
   const num: string = req.params;
 
   const fibN: number = fibonacci(parseInt(num));
