@@ -1,6 +1,6 @@
 // Endpoint for querying the fibonacci numbers
 
-import fibonacci from './fib'
+import { fibonacci } from './fib'
 
 interface Req {
   params: string
