@@ -1,5 +1,6 @@
 // util function that computes the fibonacci numbers
-module.exports = function fibonacci(n) {
+
+export function fibonacci(n: number) : number {
   if (n < 0) {
     return -1;
   } else if (n == 0) {
@@ -9,4 +10,4 @@ module.exports = function fibonacci(n) {
   }
 
   return fibonacci(n - 1) + fibonacci(n - 2);
-};
+}
